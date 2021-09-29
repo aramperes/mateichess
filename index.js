@@ -42,9 +42,9 @@ async function takeBoardScreenshot(page, gameUrl) {
     const controlsButton = await page.$('.board-controls-icon');
     controlsButton.evaluate(button => button.click());
     await page.waitForSelector('.board-settings-modal');
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(200);
     await page.click('#coordinate');
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(200);
     await page.keyboard.press('ArrowUp');
     await page.keyboard.press('Enter');
     await (await page.$('.section-title-dismissible-icon')).evaluate(button => button.click());
