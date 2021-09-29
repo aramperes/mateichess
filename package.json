@@ -1,0 +1,17 @@
+{
+  "name": "mateichess",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "eta": "^1.12.3",
+    "puppeteer": "^10.4.0"
+  }
+}
