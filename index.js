@@ -5,32 +5,10 @@ function flipCoordinate(whiteKingPosition) {
     const file = whiteKingPosition[0];
     const rank = whiteKingPosition[1];
 
-    if (file === 'a') {
-        return 'h' + (9 - rank);
-    }
-    if (file === 'b') {
-        return 'g' + (9 - rank);
-    }
-    if (file === 'c') {
-        return 'f' + (9 - rank);
-    }
-    if (file === 'd') {
-        return 'e' + (9 - rank);
-    }
-    if (file === 'e') {
-        return 'd' + (9 - rank);
-    }
-    if (file === 'f') {
-        return 'c' + (9 - rank);
-    }
-    if (file === 'g') {
-        return 'b' + (9 - rank);
-    }
-    if (file === 'h') {
-        return 'a' + (9 - rank);
-    } else {
-        return `idk-${whiteKingPosition}`
-    }
+    const newFile = String.fromCharCode('a'.charCodeAt(0) - (file.charCodeAt(0) - 'h'.charCodeAt(0)));
+    const newRank = (9 - rank);
+
+    return `${newFile}${newRank}`;
 }
 
 async function takeBoardScreenshot(page, gameUrl) {
